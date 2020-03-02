@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>PartFlush</title>
+</head>
+<body>
+    <div th:fragment="part" id="replace">
+        <h1>part1</h1>
+        <div th:unless="${#strings.isEmpty(message)}">
+            <div class="header">提示：</div>
+            <p th:text="${message}">恭喜，操作成功！</p>
+            <h4 th:text="${myword}"></h4>
+        </div>
+    </div>
+    <div>
+        <h1>part2</h1>
+        <p>我，汉语常用字，读作wǒ，最早见于甲骨文，其甲骨文本义指奴隶社会里一种用来行刑杀人和肢解牲口的凶器，后由本义衍生出“手持大戉，呐喊示威”等意；
+            但到了战国时代，“我”字本义所代表的凶器被后起的更优良的凶器淘汰，于是“我”字在... </p>
+    </div>
+
+    <div>
+        <button id="btn-1">part1Flush</button>
+        <button>part2Flush</button>
+    </div>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</body>
+<script language="JavaScript">
+    $(function () {
+        $('#btn-1').click(function () {
+            $.ajax({
+                url: "/part1Flush",
+                type: "GET",
+                data: null,
+                success: function (data) {
+                    console.info(data);
+                    $('#replace').html(data);
+                }
+            })
+        })
+    })
+</script>
+</html>

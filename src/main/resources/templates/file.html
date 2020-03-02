@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>file</title>
+</head>
+<body>
+    <form action="#" th:action="@{/upload}" method="post" enctype="multipart/form-data">
+        <label>上传图片</label>
+        <input type="file" name="file">
+        <input type="submit" value="上传">
+    </form>
+    <div th:text="${#strings.isEmpty(url)}"></div>
+    <div th:unless="${#strings.isEmpty(url)}">
+        <h1>图片</h1>
+        <img src="#" th:src="@{${url}}" alt="">
+
+
+        <h2>图片img显示</h2>
+        <img src="#" th:src="@{${path}}" alt="">
+    </div>
+</body>
+</html>
