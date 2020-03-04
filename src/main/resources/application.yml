@@ -8,3 +8,20 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  # Redis基础配置
+  redis:
+    host: 127.0.0.1
+    password: mouse
+    port: 6379
+    # lettuce配置
+    lettuce:
+      pool:
+        max-active: 8   # 连接池最大连接数（负数表示没有限制）
+        max-wait: -1    # 连接池最大阻塞等待时间（负数表示没有限制）
+        max-idle: 4     # 连接池中最大空闲连接
+        min-idle: 1     # 连接池中最小空闲连接
+
+      # jedis:
+    #  pool:
+     #   max-active: 8
+      #  min-idle: 1
