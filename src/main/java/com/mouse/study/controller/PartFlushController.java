@@ -1,4 +1,4 @@
-package com.mouse.study;
+package com.mouse.study.controller;
 /*
  *created by mouse on 2020/2/28
  */
@@ -7,11 +7,6 @@ package com.mouse.study;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 @Controller
 public class PartFlushController {

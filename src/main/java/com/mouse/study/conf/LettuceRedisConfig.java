@@ -1,4 +1,4 @@
-package com.mouse.study.Conf;
+package com.mouse.study.conf;
 
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;

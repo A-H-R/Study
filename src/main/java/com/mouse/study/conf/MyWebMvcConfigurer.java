@@ -1,4 +1,4 @@
-package com.mouse.study.Conf;
+package com.mouse.study.conf;
 /*
  *  created by mouse on 2020/2/29
  *  文件上传配置文件，定义本地资源文件夹

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <h1>LOGIN</h1>
+
+    <form action="" th:action="@{/login}" method="post">
+        <input type="hidden" value="1" name="id">
+        用户名: <input type="text" name="username">
+        密码:<input type="password" name="password">
+        <input type="submit" value="提交">
+    </form>
+
+    <h2>结果</h2>
+    <div th:unless="${#strings.isEmpty(message)}">
+        <div class="header">提示：</div>
+        <p th:text="${message}">恭喜，操作成功！</p>
+    </div>
+
+
+</body>
+</html>
